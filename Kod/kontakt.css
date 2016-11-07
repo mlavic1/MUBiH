@@ -70,7 +70,7 @@ body{
 #pitanje {
 	width: 60%;
 }
-@media screen and (max-width: 384px){
+@media all and (min-width:50px) and (max-width: 480px){
 	#slika-logo {
 		width: 50%;
 	}
