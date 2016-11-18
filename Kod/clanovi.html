@@ -3,53 +3,75 @@
 <HEAD>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<TITLE> Prelazni rok
+<TITLE> Clanovi
 </TITLE>
 <link rel="stylesheet" type="text/css" href="clanovi.css">
+<link rel="stylesheet" type="text/css" href="login.css">
+<script src="login.js"></script>
+<script src="ajax.js"></script>
+<script src="clanovi.js"></script>
 </HEAD>
 <BODY>
-<div class="red">
-	<div id="slika-logo" class="kol-2 logo"><img src="Logo-Manutd.jpg" alt ="Slika loga"></div>
-	<div class="kol-10 meni">
-	<ul>
-	<li><a href="pocetna.html">Početna</a></li>
-	<li><a href="historijakluba.html">Historija kluba</a></li>
-	<li><a href="kontakt.html">Kontakt</a></li>
-	<li id="trenutni1"><a href="clanovi.html">Članovi</a></li>
-	<li><a href="oNama.html">O nama</a></li>
-	<li><a href="login.html">Login</a></li>
-	</ul>
-	 </div>
+<div class="red" id="sadrzaj">
+  <div id="slika-logo" class="kol-2 logo"><img src="Logo-Manutd.jpg" alt ="Slika loga"></div>
+  <div class="kol-10 meni">
+  <ul>
+  <li><a href="#" onclick="ucitaj('pocetna')">Početna</a></li>
+  <li><a href="#" onclick="ucitaj('historijaKluba')">Historija kluba</a></li>
+  <li><a href="#" onclick="ucitaj('kontakt')">Kontakt</a></li>
+  <li id="trenutni1"><a href="#" onclick="ucitaj('clanovi')">Članovi</a></li>
+  <li><a href="#" onclick="ucitaj('oNama')">O nama</a></li>
+  <li><a href="#" onclick="ucitaj('login')">Login</a></li>
+  </ul>
+   </div>
+     
 </div>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="clanovi.css">
+<link rel="stylesheet" type="text/css" href="login.css">
+<script src="login.js"></script>
 <div class="red">
-<div id="prazan" class ="kol-2">&nbsp;</div>
+<div class="kol-2 dropmeni">
+  <button onclick="funkcijadropdown()" class="dropdugme">Drop Meni</button>
+  <div id="drop" class="drsadrzaj">
+  <a href="#" onclick="ucitaj('pocetna')">Početna</a>
+    <a href="#" onclick="ucitaj('historijaKluba')">Historija kluba</a>
+  <a href="#" onclick="ucitaj('kontakt')">Kontakt</a>
+  <a href="#" onclick="ucitaj('clanovi')">Članovi</a>
+  <a href="#" onclick="ucitaj('oNama')">O nama</a>
+  <a href="#" onclick="ucitaj('login')">Login</a>
+  </div>
+</div>
 <div class="kol-10 tekst">
 <h2>Postanite naš član</h2>
 <p>Popunite svoje lične podatke</p>
-<form action="action_page.php">
+<div id="greska"></div>
+<form >
 	Ime :<br>
-	<input type="text" name="ime">
+	<input type="text" name="ime" id="imee">
 	<br>
   	Prezime :<br>
-  	<input type="text" name="prezime">
+  	<input type="text" name="prezime" id="prezimee">
   	<br>
-  	Adresa:<br>
-  	<input type="text" name="adresa">
+  	Adresa i broj:<br>
+  	<input type="text" name="adresa" id="adresa">
   	<br>
   	Grad:<br>
-  	<input type="text" name="grad">
+  	<input type="text" name="grad" id="grad">
   	<br>
   	Username:<br>
-  	<input type="text" name="username">
+  	<input type="text" name="username" id="user">
   	<br>
   	Password:<br>
-  	<input type="text" name="pasvord">
+  	<input type="password" name="pasvord" id="pass1">
   	<br>
   	Ponovite password:<br>
-  	<input type="text" name="pasvord2">
+  	<input type="password" name="pasvord2" id="pass2">
   	<br>
   	<br><br>
-  	<input type="submit" value="Pošalji">
+  	<input id="dugmeLogin" type="button" value="Login" onclick="validirajClana()">
 	</form>
 </div>
 

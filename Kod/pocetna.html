@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC >
+<DOCTYPE HTML PUBLIC >
 <HTML>
 <HEAD>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -8,27 +8,46 @@
 Početna
 </TITLE>
 <link rel="stylesheet" type="text/css" href="pocetna.css">
+<script src="ajax.js"></script>
+<link rel="stylesheet" type="text/css" href="login.css">
+
+<script src="login.js"></script>
+
 </HEAD>
 <BODY>
-<div class="red">
+
+<div class="red" id="sadrzaj">
 	<div id="slika-logo" class="kol-2 logo"><img src="Logo-Manutd.jpg" alt ="Slika loga"></div>
 	<div class="kol-10 meni">
 	<ul>
-	<li id="trenutni1"><a href="pocetna.html">Početna</a></li>
-	<li><a href="historijaKluba.html">Historija kluba</a></li>
-	<li><a href="kontakt.html">Kontakt</a></li>
-	<li><a href="clanovi.html">Članovi</a></li>
-	<li><a href="oNama.html">O nama</a></li>
-	<li><a href="login.html">Login</a></li>
+	<li id="trenutni1"><a href="#" onclick="ucitaj('pocetna')">Početna</a></li>
+	<li><a href="#" onclick="ucitaj('historijaKluba')">Historija kluba</a></li>
+	<li><a href="#" onclick="ucitaj('kontakt')">Kontakt</a></li>
+	<li><a href="#" onclick="ucitaj('clanovi')">Članovi</a></li>
+	<li><a href="#" onclick="ucitaj('oNama')">O nama</a></li>
+	<li><a href="#" onclick="ucitaj('login')">Login</a></li>
 	</ul>
 	 </div>
-	 <!--<div class="kol-10 stadion"><img src="stadion.jpg" alt ="Slika stadiona"></div>-->
-	 
+	 	 
 </div>
 
+<link rel="stylesheet" type="text/css" href="pocetna.css">
+<link rel="stylesheet" type="text/css" href="login.css">
+<script src="login.js"></script>
 <div class="red">
 	
-	<div class="kol-2">&nbsp; </div>
+	<div class="kol-2 dropmeni">
+  <button onclick="funkcijadropdown()" class="dropdugme">Drop Meni</button>
+  <div id="drop" class="drsadrzaj">
+  <a href="#" onclick="ucitaj('pocetna')">Početna</a>
+  <a href="#" onclick="ucitaj('historijaKluba')">Historija kluba</a>
+  <a href="#" onclick="ucitaj('kontakt')">Kontakt</a>
+  <a href="#" onclick="ucitaj('clanovi')">Članovi</a>
+  <a href="#" onclick="ucitaj('oNama')">O nama</a>
+  <a href="#" onclick="ucitaj('login')">Login</a>
+  </div>
+</div>
+
 	<div id="tekst" class ="kol-10 tekst"><h1>Trenutna tabela:</h1>
 	<div class="kol-12 tabelasl"><img src="tabela.jpg" alt ="Slika tabele"></div>
 	</div>

@@ -22,14 +22,7 @@ body{
 
 
 .meni ul{
-	
-	/*float: left;
-	list-style-type: none;
-	margin: 0%;
-	padding: 0%;
-	text-align: center;
-	*/
-	
+
 	list-style-type: none;
     margin: 0;
     padding: 0;
@@ -41,12 +34,7 @@ body{
 }
 
 .meni li {
-	/*
-	display: inline;
-   	padding: 2%;
-    background-color :#800000;
-    color: #ffffff;
-	*/
+
 	float: left;
 	
 
@@ -67,14 +55,7 @@ body{
     background-color: #111;
 }
 
-/*.stadion img{
-	float:left;
-	width: 100%;
-	min-width: 1%;
-	max-width: 100%;
-	height: fixed;
-	height: 26%;
-}*/
+
 .tekst{
 	border: 0 black;
 	background-color: #333;
@@ -103,6 +84,12 @@ body{
 	#slika-logo {
 		width: 50%;
 	}
+	.dropmeni{
+		left:50%;
+		top:-520px;
+
+	}
+
 	.meni ul{
 		display: block;
 		width: 30%;
@@ -116,9 +103,7 @@ body{
 
    
 }
-/*@media all and (min-width:50px) and (max-width: 480px){
 
-}*/
 
 .kol-1{width: 8.33%;
 display: inline-block; 

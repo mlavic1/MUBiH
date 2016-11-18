@@ -20,13 +20,7 @@ body{
 	max-width: 100%;
 }
 .meni ul{
-	
-	/*float: left;
-	list-style-type: none;
-	margin: 0%;
-	padding: 0%;
-	text-align: center;
-	*/
+
 	list-style-type: none;
     margin: 0;
     padding: 0;
@@ -36,12 +30,7 @@ body{
 }
 
 .meni li {
-	/*
-	display: inline;
-   	padding: 2%;
-    background-color :#800000;
-    color: #ffffff;
-	*/
+
 	float: left;
 
 }

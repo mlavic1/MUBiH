@@ -20,13 +20,7 @@ body{
 	max-width: 100%;
 }
 .meni ul{
-	
-	/*float: left;
-	list-style-type: none;
-	margin: 0%;
-	padding: 0%;
-	text-align: center;
-	*/
+
 	list-style-type: none;
     margin: 0;
     padding: 0;
@@ -36,12 +30,7 @@ body{
 }
 
 .meni li {
-	/*
-	display: inline;
-   	padding: 2%;
-    background-color :#800000;
-    color: #ffffff;
-	*/
+
 	float: left;
 
 }
@@ -140,3 +129,52 @@ display: inline-block;
 	min-height: 1px;
 	float:left;
 }
+
+#greska{
+	color: red;
+}
+
+.dropdugme {
+    background-color: #333;
+    color: white;
+    padding: 10%;
+    font-size: 100%;
+    border: none;
+    cursor: pointer;
+    width: 70%;
+
+}
+
+
+.dropdugme:hover, .dropdugme:focus {
+    background-color: #660000;
+}
+
+
+.dropmeni {
+   position: relative;
+    display: inline-block;
+    
+}
+
+
+.drsadrzaj {
+    display: none;
+    position: absolute;
+    background-color: white; 
+   width: 70%;
+}
+
+
+.drsadrzaj a {
+
+    color: black;
+    padding: 15% 10%;
+    text-decoration: none;
+    display: block;
+
+}
+
+.show {
+
+	display:block;}

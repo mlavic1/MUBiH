@@ -6,23 +6,40 @@
 <TITLE> O nama
 </TITLE>
 <link rel="stylesheet" type="text/css" href="oNama.css">
+<link rel="stylesheet" type="text/css" href="login.css">
+<script src="login.js"></script>
+<script src="ajax.js"></script>
 </HEAD>
 <BODY>
-<div class="red">
-	<div id="slika-logo" class="kol-2 logo"><img src="Logo-Manutd.jpg" alt ="Slika loga"></div>
-	<div class="kol-10 meni">
-	<ul>
-	<li><a href="pocetna.html">Početna</a></li>
-	<li><a href="historijakluba.html">Historija kluba</a></li>
-	<li><a href="kontakt.html">Kontakt</a></li>
-	<li><a href="clanovi.html">Članovi</a></li>
-	<li id="trenutni1"><a href="oNama.html">O nama</a></li>
-	<li><a href="login.html">Login</a></li>
-	</ul>
-	 </div>
+<div class="red" id="sadrzaj">
+  <div id="slika-logo" class="kol-2 logo"><img src="Logo-Manutd.jpg" alt ="Slika loga"></div>
+  <div class="kol-10 meni">
+  <ul>
+  <li><a href="#" onclick="ucitaj('pocetna')">Početna</a></li>
+  <li><a href="#" onclick="ucitaj('historijaKluba')">Historija kluba</a></li>
+  <li><a href="#" onclick="ucitaj('kontakt')">Kontakt</a></li>
+  <li><a href="#" onclick="ucitaj('clanovi')">Članovi</a></li>
+  <li id="trenutni1"><a href="#" onclick="ucitaj('oNama')">O nama</a></li>
+  <li><a href="#" onclick="ucitaj('login')">Login</a></li>
+  </ul>
+   </div>
+     
 </div>
-<div class="red">
-<div id="prazan" class ="kol-2">&nbsp;</div>
+<link rel="stylesheet" type="text/css" href="oNama.css">
+<link rel="stylesheet" type="text/css" href="login.css">
+<script src="login.js"></script>
+<div class="red" >
+<div class="kol-2 dropmeni">
+  <button onclick="funkcijadropdown()" class="dropdugme">Drop Meni</button>
+  <div id="drop" class="drsadrzaj">
+  <a href="#" onclick="ucitaj('pocetna')">Početna</a>
+   <a href="#" onclick="ucitaj('historijaKluba')">Historija kluba</a>
+  <a href="#" onclick="ucitaj('kontakt')">Kontakt</a>
+  <a href="#" onclick="ucitaj('clanovi')">Članovi</a>
+  <a href="#" onclick="ucitaj('oNama')">O nama</a>
+  <a href="#" onclick="ucitaj('login')">Login</a>
+  </div>
+</div>
 <div class="kol-10 tekst">
 <p>Udruženje je zvanično priznato 9.4.2013 od strane Ministrstva pravde BiH.
 
@@ -32,5 +49,6 @@ Vizija udruženja je da promoviše ime Manchester Uniteda u Bosni i Hercegovini 
 </p>
 </div>
 </div>
+
 </BODY>
 </HTML>
