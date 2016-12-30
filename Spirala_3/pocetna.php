@@ -54,8 +54,8 @@ session_start();
 	<div id="slika-logo" class="kol-2 logo"><img src="Logo-Manutd.jpg" alt ="Slika loga"></div>
 	<div class="kol-10 meni">
 	<ul>
-	<li id="trenutni1"><a href="index.php">Početna</a></li>
-	<li><a href="historijakluba.php">Historija kluba</a></li>
+	<li id="trenutni1"><a href="pocetna.php">Početna</a></li>
+	<li><a href="historijaKluba.php">Historija kluba</a></li>
 	<li><a href="kontakt.php">Kontakt</a></li>
 	<li><a href="clanovi.php">Članovi</a></li>
 	<li><a href="oNama.php">O nama</a></li>
@@ -81,7 +81,7 @@ print'<li><a href="login.php">Login</a></li>';
 
 <div class="red">
 	
-	<div class="kol-2"><form action="index.php" method="post">
+	<div class="kol-2"><form action="pocetna.php" method="post">
 <input type="text" size="15" name="kljrijec" id ="pretraga" onkeyup="prikazi(this.value)">
 <button type="submit" name="search">Search</button>
 <div id="livesearch"></div>
@@ -106,11 +106,11 @@ if (strlen($q)>0) {
         
         if ($hint=="") {
           
-          $hint="<a href='index.php' target='_blank'>" . 
+          $hint="<a href='pocetna.php' target='_blank'>" . 
           $y->item(0)->childNodes->item(0)->nodeValue . "</a>";
         } else {
           
-          $hint=$hint . "<br /><a href='index.php' target='_blank'>" . 
+          $hint=$hint . "<br /><a href='pocetna.php' target='_blank'>" . 
           $y->item(0)->childNodes->item(0)->nodeValue . "</a>";
         }
       }
@@ -118,11 +118,11 @@ if (strlen($q)>0) {
          
         if ($hint=="") {
           
-          $hint="<a href='index.php' target='_blank'>" . 
+          $hint="<a href='pocetna.php' target='_blank'>" . 
           $z->item(0)->childNodes->item(0)->nodeValue . "</a>";
         } else {
           
-          $hint=$hint . "<br /><a href='index.php' target='_blank'>" . 
+          $hint=$hint . "<br /><a href='pocetna.php' target='_blank'>" . 
           $z->item(0)->childNodes->item(0)->nodeValue . "</a>";
         }
       }
