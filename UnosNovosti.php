@@ -27,7 +27,7 @@ session_start();
 	<div id="slika-logo" class="kol-2 logo"><img src="Logo-Manutd.jpg" alt ="Slika loga"></div>
 	<div class="kol-10 meni">
 	<ul>
-	<li><a href="pocetna.php">Početna</a></li>
+	<li><a href="index.php">Početna</a></li>
 	<li><a href="historijakluba.php">Historija kluba</a></li>
 	<li ><a href="kontakt.php">Kontakt</a></li>
 	<li><a href="clanovi.php">Članovi</a></li>
@@ -145,7 +145,7 @@ if(isset($_POST['promijeni'])){
 
 		$doc->save('kontaktXML.xml');
 
-		header("location:/master/pocetna.php");
+		header("location:/master/index.php");
 		exit();
 
 }

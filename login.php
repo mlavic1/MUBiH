@@ -61,7 +61,7 @@
 	
 	<div class="kol-10 meni">
 	<ul>
-	<li><a href="pocetna.php">Početna</a></li>
+	<li><a href="index.php">Početna</a></li>
 	<li><a href="historijakluba.php">Historija kluba</a></li>
 	<li><a href="kontakt.php">Kontakt</a></li>
 	<li><a href="clanovi.php">Članovi</a></li>
