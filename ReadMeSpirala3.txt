@@ -11,4 +11,5 @@ u odreðenom formatu u pdf.
 Opcija pretrage je napravljana pomoæu ajax-a i na unos slova se poziva funkcija koja provjerava da li trenutni upisani string pripada nekom imenu ili prezimenu
 igraèa , jer pretraga ide po ta dva polja.ukoliko jeste, to ime se spasi u varijablu te se ispiše u div ispod samog unosa teksta.maksimalni broj igraca u padajuæoj
 listi je 10 igraèa. Klikom na dugme search ispod se pojave sva imena i prezimena igraèa koja zadovoljavaju string koji se pretražuje.
-
+NAPOMENA: Spirala bi se trebala raspakovati direktno u www folderu u wampu, jer neki headeri upucuju npr na localhost:/pocetna.php , tako da ako se otvori negdje drugo
+nece moci pristupiti toj stranici.

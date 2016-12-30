@@ -145,7 +145,7 @@ if(isset($_POST['promijeni'])){
 
 		$doc->save('kontaktXML.xml');
 
-		header("location:/master/pocetna.php");
+		header("location:pocetna.php");
 		exit();
 
 }
@@ -176,7 +176,7 @@ if (isset($_POST['update'])) {
 	}
 
 	echo	'<p>Unesite ime i prezime igraca i promijenite njegov broj golova</p>
-		<form action="updateNovost.php?id='. $id .'" method="post">
+		<form action="UnosNovosti.php?id='. $id .'" method="post">
 			Ime igrača :<br>
 			<input id="ime" type="text" name="nameizmjena" value="'. $ime .'"><br>
 			Prezime igrača :<br>

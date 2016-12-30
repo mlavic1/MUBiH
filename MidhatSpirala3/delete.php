@@ -26,7 +26,7 @@
 
 		$doc->save('kontaktXML.xml');
 
-		header("location:/master/pocetna.php");
+		header("location:pocetna.php");
 		exit();
 
 	}
