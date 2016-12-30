@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+	width: 95%;
+	margin: 0 auto;
+	min-width: 300px;
+	max-width: 1300px;
+	background: url("stadion.jpg") no-repeat fixed;
+	background-size:100% 100%;
+	
+}
+
+
+.logo img{
+
+	float:left;
+	width: 100%;
+	min-width: 1%;
+	max-width: 100%;
+}
+.meni ul{
+	
+	/*float: left;
+	list-style-type: none;
+	margin: 0%;
+	padding: 0%;
+	text-align: center;
+	*/
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+
+}
+
+.meni li {
+	/*
+	display: inline;
+   	padding: 2%;
+    background-color :#800000;
+    color: #ffffff;
+	*/
+	float: left;
+
+}
+#trenutni1{background-color: #660000}
+
+.meni li a{
+	display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+
+}
+.meni li a:hover:not(.active) {
+    background-color: #111;
+}
+.tekst{
+	border: 0 black;
+	background-color: #333;
+	color: white;
+	padding-left: 2%;
+	padding-top: 1%;
+	padding-right: 2%;
+	padding-bottom: 1%;
+	font-size: 20px;
+}
+
+@media screen and (max-width: 384px){
+	#slika-logo {
+		width: 50%;
+	}
+	.meni ul{
+		display: block;
+		width: 30%;
+		overflow: hidden;
+
+	}
+
+	#tekst{
+		width: 100%;
+	}
+	#prazan{
+		width: 100%;
+	}
+   
+}
+.kol-1{width: 8.33%;
+display: inline-block; 
+	float: left;
+}
+.kol-2{width: 16.66%;
+display: inline-block; 
+	float: left;
+}
+.kol-3{width: 25%;
+display: inline-block; 
+	float: left;
+}
+.kol-4{width: 33.33%;
+display: inline-block; 
+	float: left;
+}
+.kol-5{width: 41.66%;
+display: inline-block; 
+	float: left;
+}
+.kol-6{width: 50%;
+display: inline-block; 
+	float: left;
+}
+.kol-7{width: 58.33%;
+display: inline-block; 
+	float: left;
+}
+.kol-8{width: 66.66%;
+display: inline-block; 
+	float: left;
+}
+.kol-9{width: 75%;
+display: inline-block; 
+	float: left;
+}
+.kol-10{width: 83.33%;
+display: inline-block; 
+	float: left;
+}
+.kol-11{width: 91.66%;
+display: inline-block; 
+	float: left;
+}
+.kol-12{width: 100%;
+display: inline-block; 
+	float: left;
+}
+.red{
+	width: 100%;
+	min-height: 1px;
+	float:left;
+}
