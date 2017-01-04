@@ -55,7 +55,7 @@ session_start();
 	<div class="kol-10 meni">
 	<ul>
 	<li id="trenutni1"><a href="index.php">Početna</a></li>
-	<li><a href="historijaKluba.php">Historija kluba</a></li>
+	<li><a href="historijakluba.php">Historija kluba</a></li>
 	<li><a href="kontakt.php">Kontakt</a></li>
 	<li><a href="clanovi.php">Članovi</a></li>
 	<li><a href="oNama.php">O nama</a></li>
