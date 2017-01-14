@@ -47,10 +47,7 @@ print'<li><a href="login.php">Login</a></li>';
     <?php
     if (isset($_SESSION['user'])) {
     print'<li><a href="download.php">Download csv</a></li>';
-<<<<<<< HEAD
     print'<li><a href="extract.php">Prebaci iz XML-a u bazu</a></li>';
-=======
->>>>>>> 99a142b8baf56c2e8ca1fd67e0ac192393b771d6
     }
     ?>
 	</ul>
@@ -98,7 +95,6 @@ $password2Error = "Greska u passwordu2, nije vam isti kao password 1";
 
 }
                 else{
-<<<<<<< HEAD
    $veza = new PDO("mysql:dbname=league;host=localhost;charset=utf8", "admin", "admin");
      $veza->exec("set names utf8");
    
@@ -126,35 +122,6 @@ $rezultat = $veza->query("INSERT INTO admin(firstname,lastname,address,city,user
  
 }
 
-=======
-    $xml = new DOMDocument("1.0","utf-8");
-    $xml->load("admin.xml");
-    $rootTag = $xml->getElementsByTagName("data")->item(0);
-    
-    $dataTag = $xml->createElement("clan");
-   
-    $imeTag = $xml->createElement("ime",$_REQUEST['ime']);
-    $prezimeTag = $xml->createElement("prezime",$_REQUEST['prezime']);
-    $adresaTag = $xml->createElement("adresa",$_REQUEST['adresa']);
-     $gradTag = $xml->createElement("grad",$_REQUEST['grad']);
-    $userTag = $xml->createElement("username",$_REQUEST['username']);
-    $pas1Tag = $xml->createElement("pasvord",$_REQUEST['pasvord']);
-    $pas2Tag = $xml->createElement("pasvord2",$_REQUEST['pasvord2']);
-
-    $dataTag->appendChild($imeTag);
-    $dataTag->appendChild($prezimeTag);
-    $dataTag->appendChild($adresaTag);
-    $dataTag->appendChild($gradTag);
-    $dataTag->appendChild($userTag);
-    $dataTag->appendChild($pas1Tag);
-    $dataTag->appendChild($pas2Tag);
-
-    $rootTag->appendChild($dataTag);
-
-    $xml->save("admin.xml");
-}
-}
->>>>>>> 99a142b8baf56c2e8ca1fd67e0ac192393b771d6
 
 
 ?>

@@ -70,10 +70,7 @@ print'<li><a href="login.php">Login</a></li>';
   <?php
   if (isset($_SESSION['user'])) {
   print'<li><a href="download.php">Download csv</a></li>';
-<<<<<<< HEAD
   print'<li><a href="extract.php">Prebaci iz XML-a u bazu</a></li>';
-=======
->>>>>>> 99a142b8baf56c2e8ca1fd67e0ac192393b771d6
 }
   ?>
 	
@@ -93,7 +90,6 @@ print'<li><a href="login.php">Login</a></li>';
  if(isset($_REQUEST['search'])){
 	$rijec = $_POST['kljrijec'];
 	$rijec = htmlentities($rijec, ENT_COMPAT, 'UTF-8', false);
-<<<<<<< HEAD
   $q=$rijec;
 	$hint = "";
   $veza = new PDO("mysql:dbname=league;host=localhost;charset=utf8", "admin", "admin");
@@ -115,9 +111,6 @@ if (!$rezultat) {
            }
          }
   /*
-=======
-	$hint = "";
->>>>>>> 99a142b8baf56c2e8ca1fd67e0ac192393b771d6
 	$q=$rijec;
 $xmlDoc=new DOMDocument();
 $xmlDoc->load("kontaktXML.xml");
@@ -161,10 +154,7 @@ if (strlen($q)>0) {
 
  echo "\n".$hint;
 }
-<<<<<<< HEAD
 */
-=======
->>>>>>> 99a142b8baf56c2e8ca1fd67e0ac192393b771d6
  ?>
 </form> </div>
 	<div id="tekst" class ="kol-10 tekst"><h1>Trenutna tabela:</h1>
@@ -179,7 +169,6 @@ if (strlen($q)>0) {
 <div class="kol-2">&nbsp; </div>
 <?php 
 
-<<<<<<< HEAD
 	$veza = new PDO("mysql:dbname=league;host=localhost;charset=utf8", "admin", "admin");
      $veza->exec("set names utf8");
 	
@@ -197,55 +186,20 @@ foreach ($rezultat as $row) {
          echo '
 
 		<form action="delete.php?id='. $row["id"] .'" method="post"  id="form1">
-=======
-	$filexml='kontaktXML.xml';
-	$xml = simplexml_load_file($filexml);
-	$Parent = 0;
-	$Nodes = 0;
-	
-	print'<div id="tekst" class ="kol-10 tekst"><h1>Lista najboljih strijelaca</h1>';
-
-	foreach($xml->children() as $x)
-       {
-       	
-	foreach ($x->children() as $data) 
-        {
-        
-            echo $data."&nbsp;";
-
-
-        }
-         echo "<br>";
-         if(isset($_SESSION['user'])){
-         echo '
-
-		<form action="delete.php?id='. $x['id'] .'" method="post"  id="form1">
->>>>>>> 99a142b8baf56c2e8ca1fd67e0ac192393b771d6
 
         	<button type="submit" name="delete">Delete</button>
 
 		</form>
-<<<<<<< HEAD
 		<form action="UnosNovosti.php?id='. $row["id"] .'" method="post" >
-=======
-		<form action="UnosNovosti.php?id='. $x['id'] .'" method="post" >
->>>>>>> 99a142b8baf56c2e8ca1fd67e0ac192393b771d6
 
         	<button type="submit" name="update">Update</button>
 
 		</form>
-<<<<<<< HEAD
 
          ';
 }
  }       
 
-=======
-         ';
-}
-        $Parent = $Parent + 1;
-}
->>>>>>> 99a142b8baf56c2e8ca1fd67e0ac192393b771d6
 
 	
 	?>

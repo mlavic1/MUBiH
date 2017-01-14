@@ -48,10 +48,7 @@ print'<li><a href="login.php">Login</a></li>';
 	<?php
 	if (isset($_SESSION['user'])) {
 	print'<li><a href="download.php">Download csv</a></li>';
-<<<<<<< HEAD
 	print'<li><a href="extract.php">Prebaci iz XML-a u bazu</a></li>';
-=======
->>>>>>> 99a142b8baf56c2e8ca1fd67e0ac192393b771d6
 }
 	?>
 	</ul>
@@ -84,7 +81,6 @@ if(isset($_REQUEST['posalji'])){
     			$questionError= "Niste fino unijeli pitanje.Na kraju mora biti znak upita.";
     }
     else {
-<<<<<<< HEAD
 $veza = new PDO("mysql:dbname=league;host=localhost;charset=utf8", "admin", "admin");
      $veza->exec("set names utf8");
 
@@ -103,25 +99,6 @@ $rezultat = $veza->query("INSERT INTO questions(firstname,lastname,question)  VA
         echo "Uspješno";
     }
 	
-=======
-	$xml = new DOMDocument("1.0","utf-8");
-	$xml->load("pitanja.xml");
-	$rootTag = $xml->getElementsByTagName("document")->item(0);
-
-	$dataTag = $xml->createElement("kontakt");
-
-	$imeTag = $xml->createElement("ime",$_REQUEST['firstname']);
-	$prezimeTag = $xml->createElement("prezime",$_REQUEST['lastname']);
-	$goloviTag = $xml->createElement("pitanje",$_REQUEST['area']);
-
-	$dataTag->appendChild($imeTag);
-	$dataTag->appendChild($prezimeTag);
-	$dataTag->appendChild($goloviTag);
-
-	$rootTag->appendChild($dataTag);
-
-	$xml->save("pitanja.xml");
->>>>>>> 99a142b8baf56c2e8ca1fd67e0ac192393b771d6
 }
 }
 ?>

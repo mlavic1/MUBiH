@@ -34,10 +34,7 @@ session_start();
 		<?php 
 if (isset($_SESSION['user'])) {
 	print'<li><a href="download.php">Download csv</a></li>';
-<<<<<<< HEAD
 	print'<li><a href="extract.php">Prebaci iz XML-a u bazu</a></li>';
-=======
->>>>>>> 99a142b8baf56c2e8ca1fd67e0ac192393b771d6
 }
 else 
 print'<li><a href="login.php">Login</a></li>';

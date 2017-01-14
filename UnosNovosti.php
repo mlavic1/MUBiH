@@ -43,10 +43,7 @@ print'<li><a href="login.php">Login</a></li>';
 	<?php
 	if (isset($_SESSION['user'])) {
 	print'<li><a href="download.php">Download csv</a></li>';
-<<<<<<< HEAD
 	print'<li><a href="extract.php">Prebaci iz XML-a u bazu</a></li>';
-=======
->>>>>>> 99a142b8baf56c2e8ca1fd67e0ac192393b771d6
 }
 	?>
 	</ul>
@@ -58,7 +55,6 @@ print'<li><a href="login.php">Login</a></li>';
 
 <?php 
 if(isset($_REQUEST['posalji'])){
-<<<<<<< HEAD
 	
 $veza = new PDO("mysql:dbname=league;host=localhost;charset=utf8", "admin", "admin");
      $veza->exec("set names utf8");
@@ -82,51 +78,15 @@ $veza = new PDO("mysql:dbname=league;host=localhost;charset=utf8", "admin", "adm
         echo "Uspješno";
     }
 
-=======
-	$xml = new DOMDocument("1.0","utf-8");
-	$xml->load("kontaktXML.xml");
-	$rootTag = $xml->getElementsByTagName("document")->item(0);
-
-	$dataTag = $xml->createElement("data");
-
-	$id = 0;
-
-	$x = simplexml_load_file("kontaktXML.xml");
-
-	foreach ($x->children() as $childrens) {
-		
-		$id = $childrens['id'];
-	}
-
-	$id = $id + 1;
-
-	$imeTag = $xml->createElement("firstname",$_REQUEST['firstname']);
-	$prezimeTag = $xml->createElement("lastname",$_REQUEST['lastname']);
-	$goloviTag = $xml->createElement("goals",$_REQUEST['goals']);
-
-	$dataTag->setAttribute('id', $id);
-	$dataTag->appendChild($imeTag);
-	$dataTag->appendChild($prezimeTag);
-	$dataTag->appendChild($goloviTag);
-
-	$rootTag->appendChild($dataTag);
-
-	$xml->save("kontaktXML.xml");
->>>>>>> 99a142b8baf56c2e8ca1fd67e0ac192393b771d6
 
 }
 
 
 
 ?>
-<<<<<<< HEAD
 
 <div id="greska"></div>
 <p>Unesite igrača i broj golova koji je postigao u bazu</p>
-=======
-<div id="greska"></div>
-<p>Unesite igrača i broj golova koji je postigao u XML</p>
->>>>>>> 99a142b8baf56c2e8ca1fd67e0ac192393b771d6
 <form action="UnosNovosti.php" method="post">
 	Ime igrača :<br>
 	<input id="ime" type="text" name="firstname" >
@@ -136,7 +96,6 @@ $veza = new PDO("mysql:dbname=league;host=localhost;charset=utf8", "admin", "adm
   	<br>
   	Broj golova:<br>
   	<input  type="text" name="goals" >
-<<<<<<< HEAD
   	<br>
   	Tim :<br>
   	<select name ="clubs">
@@ -146,9 +105,6 @@ $veza = new PDO("mysql:dbname=league;host=localhost;charset=utf8", "admin", "adm
 </select>
   	<br>
   	<br>
-=======
-  	<br><br>
->>>>>>> 99a142b8baf56c2e8ca1fd67e0ac192393b771d6
   	<input id="dugme" type="submit" name="posalji" value="Unesi" onclick="validiraj()">
 	</form>
 </div>
@@ -161,7 +117,6 @@ $veza = new PDO("mysql:dbname=league;host=localhost;charset=utf8", "admin", "adm
 if(isset($_POST['promijeni'])){
 	$id = $_GET['id'];
 
-<<<<<<< HEAD
 		$veza = new PDO("mysql:dbname=league;host=localhost;charset=utf8", "admin", "admin");
      $veza->exec("set names utf8");
 $rezultat = $veza->query("SELECT id, firstname, lastname,goals FROM players");
@@ -169,24 +124,10 @@ foreach ($rezultat as $row)
 		  { 
 
 			$data_id = $row['id'];
-=======
-		$doc = new DomDocument;
-		$doc->load('kontaktXML.xml');
-
-		$thedocument = $doc->documentElement;
-
-		$list = $thedocument->getElementsByTagName("data");
-		$length = $list->length;
-
-		foreach ($list as $data)  { 
-
-			$data_id = $data->getAttribute('id');
->>>>>>> 99a142b8baf56c2e8ca1fd67e0ac192393b771d6
 
 			if ($id == $data_id) {
 
 				if (isset($_POST['nameizmjena'])) {
-<<<<<<< HEAD
 					
 					$rezultat = $veza->query("UPDATE players SET firstname='".$_POST['nameizmjena']."' WHERE id=$id");
 					if (!$rezultat) {
@@ -212,18 +153,10 @@ foreach ($rezultat as $row)
 					}
 				
 					
-=======
-					$data->getElementsByTagName('firstname')->item(0)->nodeValue = $_POST['nameizmjena'];
-				}
-
-				if (isset($_POST['lastnameizmjena'])) {
-					$data->getElementsByTagName('lastname')->item(0)->nodeValue = $_POST['lastnameizmjena'];
->>>>>>> 99a142b8baf56c2e8ca1fd67e0ac192393b771d6
 					
 				}
 				
 				if (isset($_POST['goalsizmjena'])) {
-<<<<<<< HEAD
 						$rezultat = $veza->query("UPDATE players SET goals='".$_POST['goalsizmjena']."' WHERE id=$id");
 					if (!$rezultat) {
           		$greska = $veza->errorInfo();
@@ -235,19 +168,12 @@ foreach ($rezultat as $row)
 					}
 				
 					
-=======
-					$data->getElementsByTagName('goals')->item(0)->nodeValue = $_POST['goalsizmjena'];
->>>>>>> 99a142b8baf56c2e8ca1fd67e0ac192393b771d6
 				}
 			}
 			
 		}
 
-<<<<<<< HEAD
 		
-=======
-		$doc->save('kontaktXML.xml');
->>>>>>> 99a142b8baf56c2e8ca1fd67e0ac192393b771d6
 
 		header('Location: '."index.php",true,303);
 
@@ -264,7 +190,6 @@ if (isset($_POST['update'])) {
 	$ime = "";
 	$prezime = "";
 	$golovi = "";
-<<<<<<< HEAD
 $veza = new PDO("mysql:dbname=league;host=localhost;charset=utf8", "admin", "admin");
      $veza->exec("set names utf8");
 $rezultat = $veza->query("SELECT id, firstname, lastname,goals FROM players");
@@ -286,23 +211,6 @@ $rezultat = $veza->query("SELECT id, firstname, lastname,goals FROM players");
 				else{
 				echo "Uspješno";
 					}
-=======
-
-	
-
-
-	$xml = simplexml_load_file("kontaktXML.xml");
-
-	foreach ($xml->children() as $children) {
-
-		if ($id == $children['id']) {
-			$ime = $children->firstname;
-			$prezime = $children->lastname;
-			$golovi = $children->goals;
-
-		}
-	}
->>>>>>> 99a142b8baf56c2e8ca1fd67e0ac192393b771d6
 
 	echo	'<p>Unesite ime i prezime igraca i promijenite njegov broj golova</p>
 		<form action="UnosNovosti.php?id='. $id .'" method="post">
@@ -315,10 +223,7 @@ $rezultat = $veza->query("SELECT id, firstname, lastname,goals FROM players");
 		  	<br><br>
 		  	<input id="dugme" type="submit" name="promijeni" value="Promijeni" onsubmit="validiraj()">
 			</form>';
-<<<<<<< HEAD
 			
-=======
->>>>>>> 99a142b8baf56c2e8ca1fd67e0ac192393b771d6
 }
 
 ?>
