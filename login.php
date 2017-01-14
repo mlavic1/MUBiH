@@ -3,9 +3,14 @@
 			
 			$user = "";
 			$nameError =$passError=  "";
+<<<<<<< HEAD
 $veza = new PDO("mysql:dbname=league;host=localhost;charset=utf8", "admin", "admin");
      $veza->exec("set names utf8");
 	
+=======
+
+	$xml = simplexml_load_file('admin.xml');
+>>>>>>> 99a142b8baf56c2e8ca1fd67e0ac192393b771d6
 
 	if (isset($_SESSION['user'])) $user = $_SESSION['user'];
 	else if(isset($_REQUEST['user'])){
@@ -13,6 +18,7 @@ $veza = new PDO("mysql:dbname=league;host=localhost;charset=utf8", "admin", "adm
 	$username = htmlentities($username, ENT_COMPAT, 'UTF-8', false);
 	$password = $_POST['pass'];
 	$password = htmlentities($password, ENT_COMPAT, 'UTF-8', false);
+<<<<<<< HEAD
 	$users = $veza->query("SELECT username, password1, password2 FROM admin");
 			    if (!$users) {
 			          $greska = $veza->errorInfo();
@@ -25,6 +31,13 @@ $veza = new PDO("mysql:dbname=league;host=localhost;charset=utf8", "admin", "adm
 	     	$_SESSION['user'] = $user;
 	     	$nameError=" ";
 	     	$passError=" ";
+=======
+	foreach($xml->clan as $clan) { 
+	    if($clan->pasvord == md5($password) && $clan->username == $username) {
+	    	$user = $_REQUEST['user'];
+	     	$_SESSION['user'] = $user;
+	     	
+>>>>>>> 99a142b8baf56c2e8ca1fd67e0ac192393b771d6
 	        break;
 	    }
 	    else 

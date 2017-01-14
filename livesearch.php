@@ -1,9 +1,14 @@
 <?php
+<<<<<<< HEAD
 /*
+=======
+
+>>>>>>> 99a142b8baf56c2e8ca1fd67e0ac192393b771d6
 $xmlDoc=new DOMDocument();
 $xmlDoc->load("kontaktXML.xml");
 
 $x=$xmlDoc->getElementsByTagName('data');
+<<<<<<< HEAD
 */
 $veza = new PDO("mysql:dbname=league;host=localhost;charset=utf8", "admin", "admin");
      $veza->exec("set names utf8");
@@ -11,10 +16,17 @@ $rezultat = $veza->query("SELECT id, firstname, lastname,goals FROM players");
 //get the q parameter from URL
 $q=$_GET["q"];
 $NUMBER = 0;
+=======
+
+//get the q parameter from URL
+$q=$_GET["q"];
+
+>>>>>>> 99a142b8baf56c2e8ca1fd67e0ac192393b771d6
 //lookup all links from the xml file if length of q>0
 
 if (strlen($q)>0) {
   $hint="";
+<<<<<<< HEAD
   
   foreach ($rezultat as $u)  {
             
@@ -47,6 +59,9 @@ $tekst="Nema prijedloga";
 }
 echo $tekst;
   /*
+=======
+  $NUMBER = 0;
+>>>>>>> 99a142b8baf56c2e8ca1fd67e0ac192393b771d6
   for($i=0; $i<9; $i++) {
     $y=$x->item($i)->getElementsByTagName('firstname');
     $z=$x->item($i)->getElementsByTagName('lastname');
@@ -92,6 +107,9 @@ if ($hint=="") {
 
 //output the response
 echo $response;
+<<<<<<< HEAD
 
 */
+=======
+>>>>>>> 99a142b8baf56c2e8ca1fd67e0ac192393b771d6
 ?>
